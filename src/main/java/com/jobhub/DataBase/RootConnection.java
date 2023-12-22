@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DataBaseInfo {
+public class RootConnection {
     private static final String url = "jdbc:mysql://localhost:3306/job_hub_db";
     private static final String userName = "root";
     private static final String password = "root";
@@ -23,6 +23,6 @@ public class DataBaseInfo {
         return connection;
     }
 
-    private DataBaseInfo() throws SQLException {
+    private RootConnection()  {
     }
 }

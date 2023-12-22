@@ -1,3 +1,4 @@
+use job_hub_db;
 
 DELIMITER //
 CREATE FUNCTION CheckUsernameExists(

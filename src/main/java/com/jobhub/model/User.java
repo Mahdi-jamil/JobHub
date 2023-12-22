@@ -1,4 +1,4 @@
-package com.jobhub.components;
+package com.jobhub.model;
 
 import com.jobhub.DataBase.JobSeekerConnection;
 import com.jobhub.DataBase.RecruiterConnection;

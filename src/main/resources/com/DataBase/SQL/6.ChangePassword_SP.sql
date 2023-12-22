@@ -1,8 +1,6 @@
-DELIMITER //
-
-CREATE PROCEDURE ChangePassword_Sp(
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ChangePassword_Sp`(
     IN p_username VARCHAR(10),
-    IN P_password VARCHAR(10),
+    IN P_password VARCHAR(255),
     IN p_role VARCHAR(20)
 )
 BEGIN
@@ -13,6 +11,4 @@ BEGIN
              UPDATE job_hub_db.recruiter SET password = P_password WHERE Username = p_username ;
     END CASE;
 
-END //
-
-DELIMITER ;
+END

@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane prefHeight="354.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhub.controller.SettingsController">
+   <children>
+      <Text layoutX="50.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password " wrappingWidth="198.39453125">
+         <font>
+            <Font name="Cambria" size="23.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="10.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/icon.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="51.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Old password :" wrappingWidth="104.39453125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="51.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New password :" wrappingWidth="104.39453125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="51.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm new password :" wrappingWidth="104.39453125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button layoutX="129.0" layoutY="227.0" mnemonicParsing="false" onAction="#ChangePassword" prefHeight="32.0" prefWidth="198.0" style="-fx-background-color: #1877f2;" text="Change Account Password" textFill="WHITE" />
+      <Button layoutX="49.0" layoutY="227.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="32.0" prefWidth="64.0" style="-fx-background-color: #1877f2;" text="Cancel" textFill="WHITE" />
+      <Button layoutX="49.0" layoutY="283.0" mnemonicParsing="false" onAction="#ReviewApplications" prefHeight="32.0" prefWidth="279.0" style="-fx-background-color: #18A7f2;" text="Review Applications" textFill="WHITE" />
+      <Button fx:id="recruiterButton" layoutX="337.0" layoutY="283.0" mnemonicParsing="false" onAction="#checkPostedJobs" prefHeight="32.0" prefWidth="279.0" style="-fx-background-color: #18A7f2;" text="View My Posted Jobs" textFill="WHITE" />
+      <PasswordField fx:id="oldPassword" layoutX="163.0" layoutY="85.0" prefHeight="25.0" prefWidth="166.0" />
+      <PasswordField fx:id="confirmPassword" layoutX="163.0" layoutY="165.0" prefHeight="25.0" prefWidth="166.0" />
+      <PasswordField fx:id="newPassword" layoutX="163.0" layoutY="123.0" prefHeight="25.0" prefWidth="166.0" />
+   </children>
 </AnchorPane>

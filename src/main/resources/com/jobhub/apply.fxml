@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.jobhub.Aply"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhub.controller.ApplyController">
+   <Text layoutX="41.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Have you completed the following level of education: Bachelor's Degree?" wrappingWidth="463.13671875">
+      <font>
+         <Font name="Cambria" size="14.0" />
+      </font>
+   </Text>
+   <RadioButton fx:id="Yes" layoutX="41.0" layoutY="71.0" mnemonicParsing="false" onAction="#SelectEducation" text="Yes">
+      <toggleGroup>
+         <ToggleGroup fx:id="Education" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton layoutX="41.0" layoutY="93.0" mnemonicParsing="false" onAction="#SelectEducation" text="No" toggleGroup="$Education" />
+   <Text layoutX="41.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What is your level of proficiency in English? " wrappingWidth="463.13671875">
+      <font>
+         <Font name="Cambria" size="14.0" />
+      </font>
+   </Text>
+   <ChoiceBox fx:id="engLevel" layoutX="41.0" layoutY="164.0" prefHeight="25.0" prefWidth="205.0" />
+   <Button layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#ToHome" style="-fx-background-color: lightblue;" text="Back" />
+   <Text layoutX="41.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you comfortable working in an onsite setting? " wrappingWidth="463.13671875">
+      <font>
+         <Font name="Cambria" size="14.0" />
+      </font>
+   </Text>
+   <RadioButton fx:id="Onsite" layoutX="41.0" layoutY="239.0" mnemonicParsing="false" onAction="#SelectWhere" text="Yes">
+      <toggleGroup>
+         <ToggleGroup fx:id="onsiteGroup" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton layoutX="42.0" layoutY="265.0" mnemonicParsing="false" onAction="#SelectWhere" text="No" toggleGroup="$onsiteGroup" />
+   <Button layoutX="42.0" layoutY="335.0" mnemonicParsing="false" onAction="#chooseAndUpload" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: lightblue;" text="Upload">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
+   <Text layoutX="41.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Upload your CV(.pdf) :" wrappingWidth="463.13671875">
+      <font>
+         <Font name="Cambria" size="14.0" />
+      </font>
+   </Text>
+   <Button layoutX="151.0" layoutY="335.0" mnemonicParsing="false" onAction="#Apply" prefHeight="34.0" prefWidth="80.0" style="-fx-background-color: lightblue;" text="Apply">
+      <font>
+         <Font size="13.0" />
+      </font>
+   </Button>
 </AnchorPane>

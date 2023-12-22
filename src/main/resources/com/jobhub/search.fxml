@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane maxHeight="-Infinity" prefHeight="354.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhub.controller.SearchController">
+   <children>
+      <TableView fx:id="tableView" layoutX="7.0" layoutY="66.0" minWidth="623.0" prefHeight="286.0" prefWidth="515.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="IDField" prefWidth="48.0" text="ID" />
+            <TableColumn fx:id="titleField" prefWidth="81.0" text="Title" />
+            <TableColumn fx:id="descriptionField" prefWidth="171.0" text="Description" />
+            <TableColumn fx:id="requirementsID" prefWidth="153.0" text="Requirements" />
+          <TableColumn fx:id="salaryField" prefWidth="67.0" text="Salary" />
+            <TableColumn fx:id="locationField" prefWidth="104.0" text="Location" />
+        </columns>
+      </TableView>
+      <Label layoutX="29.0" layoutY="28.0" text="Search Job :">
+         <font>
+            <Font name="Cambria Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="SearchField" layoutX="124.0" layoutY="25.0" prefHeight="25.0" prefWidth="489.0" promptText="KeyWords" />
+   </children>
 </AnchorPane>

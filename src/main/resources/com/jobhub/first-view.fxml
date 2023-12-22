@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.jobhub.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" style="-fx-background-color: #C5D9FA;" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jobhub.controller.HelloController">
+   <Text fontSmoothingType="LCD" layoutX="202.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome !"
+         textAlignment="CENTER" wrappingWidth="196.13671875">
+      <font>
+         <Font name="Nirmala UI Semilight" size="27.0"/>
+      </font>
+   </Text>
+   <Text layoutX="176.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Find Your Dream Job"
+         textAlignment="CENTER" wrappingWidth="247.13671875">
+      <font>
+         <Font name="Rockwell Italic" size="17.0"/>
+      </font>
+   </Text>
+   <Line endX="89.0" layoutX="299.0" layoutY="122.0" startX="-88.0"/>
+   <Button layoutX="231.0" layoutY="286.0" mnemonicParsing="false" onAction="#toLoginPage" prefHeight="27.0"
+           prefWidth="139.0" style="-fx-background-color: #570e28;" text="Get Started" textAlignment="CENTER"
+           textFill="WHITE">
+      <font>
+         <Font size="13.0"/>
+      </font>
+      <opaqueInsets>
+         <Insets/>
+      </opaqueInsets>
+   </Button>
+</AnchorPane>

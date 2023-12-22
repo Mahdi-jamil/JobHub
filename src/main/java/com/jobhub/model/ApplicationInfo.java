@@ -1,4 +1,4 @@
-package com.jobhub.components;
+package com.jobhub.model;
 
 import java.util.Date;
 
