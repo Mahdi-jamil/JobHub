@@ -1,0 +1,50 @@
+
+USE JOB_SEARCH_PROJECT;
+
+CREATE TABLE `Recruiter`(
+    `Rid` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `phone` CHAR(255) NOT NULL,
+    `email` VARCHAR(15) NOT NULL,
+    `fname` VARCHAR(10) NOT NULL,
+    `lname` VARCHAR(10) NOT NULL,
+    `Cid` INT UNSIGNED NOT NULL
+);
+
+CREATE TABLE `Job`(
+    `JobID` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `title` VARCHAR(20) NOT NULL,
+    `Description` TEXT NOT NULL,
+    `Requirments` VARCHAR(255) NOT NULL,
+    `salary` DECIMAL(8, 2) NOT NULL,
+    `location` VARCHAR(30) NOT NULL,
+    `RID` INT UNSIGNED NOT NULL
+);
+CREATE TABLE `Apply`(
+    `Sid` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+    `JobID` INT UNSIGNED NOT NULL,
+    `date` DATE NOT NULL,
+    `status` VARCHAR(10) NOT NULL,
+    `CV` BLOB NOT NULL,
+    PRIMARY KEY(`Sid`,`JobID`)
+);
+
+CREATE TABLE `Job_Seeker`(
+    `Sid` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `fname` VARCHAR(25) NOT NULL,
+    `lname` VARCHAR(25) NOT NULL,
+    `phone` CHAR(25) NOT NULL,
+    `email` TINYTEXT NOT NULL,
+    `skills` MEDIUMTEXT NOT NULL
+);
+
+
+CREATE TABLE `Company`(
+    `Cid` INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `Name` CHAR(255) NOT NULL,
+    `location` CHAR(255) NOT NULL,
+    `industry` VARCHAR(20) NOT NULL
+);
+ALTER TABLE `Recruiter` ADD CONSTRAINT `recruiter_cid_foreign` FOREIGN KEY(`Cid`) REFERENCES `Company`(`Cid`);
+ALTER TABLE `Job` ADD CONSTRAINT `job_rid_foreign` FOREIGN KEY(`RID`) REFERENCES `Recruiter`(`Rid`);
+ALTER TABLE `Apply` ADD CONSTRAINT `apply_jobid_foreign` FOREIGN KEY (`JobID`) REFERENCES `Job` (`JobID`);
+ALTER TABLE `Apply` ADD CONSTRAINT `apply_sid_foreign` FOREIGN KEY (`Sid`) REFERENCES `Job_Seeker` (`Sid`);
