@@ -5,6 +5,7 @@ module com.jobhub {
     requires com.jfoenix;
     requires jbcrypt;
     requires java.desktop;
+    requires lombok;
 
 
     opens com.jobhub to javafx.fxml;
