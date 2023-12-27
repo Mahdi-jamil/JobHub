@@ -34,7 +34,8 @@ mvn dependency:resolve
 
 1. Check ScreenShots for a UI & UX
 2. Add run configuration --module-path "C:\YourPath\openjfx-21.0.1_windows-x64_bin-sdk\javafx-sdk-21.0.1\lib" --add-modules javafx.controls,javafx.fxml
-3. Note : double-click on a tableView usually do some important action (Apply,view details)
+3. Make sure to modify options in run configuration to Add dependencies with "provided" scope to class path
+4. Note : double-click on a tableView usually do some important action (Apply,view details)
 
 ## contact-information
 
